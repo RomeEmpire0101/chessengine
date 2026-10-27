@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess vs Stockfish</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Chess</h1>
+    <span id="engine-status" class="engine-status">Starting…</span>
+  </header>
+
+  <main class="layout">
+    <section class="board-area">
+      <div id="clocks" class="clocks hidden"></div>
+      <div class="board-row">
+        <div id="eval-bar" class="eval-bar hidden">
+          <div class="eval-fill"></div>
+          <span class="eval-label">0.0</span>
+        </div>
+        <div id="board" class="board" aria-label="Chess board"></div>
+      </div>
+      <div id="game-over" class="game-over hidden" role="dialog" aria-live="polite"></div>
+      <div id="loading" class="loading">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading Stockfish…</p>
+      </div>
+    </section>
+
+    <aside class="panels">
+      <div id="controls" class="card"></div>
+      <div id="new-game" class="card"></div>
+      <div class="card">
+        <h2>Moves</h2>
+        <ol id="moves" class="moves"></ol>
+      </div>
+      <div id="settings" class="card"></div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

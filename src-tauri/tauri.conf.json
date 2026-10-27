@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Exypnos Chess",
+  "version": "0.1.0",
+  "identifier": "com.exypnos.chess",
+  "build": {
+    "frontendDist": "../dist",
+    "beforeDevCommand": "node scripts/copy-web.mjs",
+    "beforeBuildCommand": "node scripts/copy-web.mjs"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Chess vs Stockfish",
+        "width": 1180,
+        "height": 820,
+        "minWidth": 360,
+        "minHeight": 560
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": ["icons/icon.ico"]
+  }
+}
